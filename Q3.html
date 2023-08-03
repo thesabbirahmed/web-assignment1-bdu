@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>সার্কভুক্ত দেশসমূহের রাজধানী</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        #countries {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        #capital {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>সার্কভুক্ত দেশসমূহের রাজধানী</h1>
+
+        <label for="countries">দেশ নির্বাচন করুন:</label>
+        <select id="countries">
+            <option value="">দেশ নির্বাচন করুন</option>
+            <option value="afghanistan">আফগানিস্তান</option>
+            <option value="bangladesh">বাংলাদেশ</option>
+            <option value="bhutan">ভুটান</option>
+            <option value="india">ভারত</option>
+            <option value="maldives">মালদ্বীপ</option>
+        </select>
+
+        <p id="capital"></p>
+    </div>
+
+    <script>
+        const selectElement = document.getElementById('countries');
+        const capitalElement = document.getElementById('capital');
+
+        selectElement.addEventListener('change', () => {
+            const selectedCountry = selectElement.value;
+            const capital = getCapital(selectedCountry);
+            capitalElement.textContent = capital ? `রাজধানী: ${capital}` : '';
+        });
+
+        function getCapital(country) {
+            switch (country) {
+                case 'afghanistan':
+                    return 'কাবুল'
+                case 'bangladesh':
+                    return 'ঢাকা';
+                case 'bhutan':
+                    return 'থিম্পু';
+                case 'india':
+                    return 'নয়া দিল্লি';
+                case 'maldives':
+                    return 'মালে';
+                default:
+                    return '';
+            }
+        }
+    </script>
+</body>
+</html>

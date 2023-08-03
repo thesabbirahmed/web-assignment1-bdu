@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Web Page Layout with Audio and Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #001233;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar li {
+            padding: 10px 0;
+        }
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #1D63FF;
+            text-align: center;
+            font-size: 28px;
+        }
+        .section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+        .section h2 {
+            color: #F0122D;
+            margin-bottom: 10px;
+            text-align: center; /* Center align the headings */
+        }
+        .section p {
+            color: #001233;
+            line-height: 1.6;
+        }
+        .audio-video-container {
+            display: flex;
+            justify-content: center; /* Center align the audio and video elements */
+            align-items: center;
+            margin-top: 30px;
+        }
+        audio, video {
+            width: 100%;
+            max-width: 300px;
+        }
+        .remarks {
+            background-color: #001233;
+            color: #333;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .remarks h2 {
+            color: white;
+            margin-bottom: 10px;
+            text-align: center; /* Center align the "Remarks" heading */
+        }
+        .remarks p {
+            color: white;
+            line-height: 1.6;
+        }
+        .contact-section {
+            background-color: #f9f9f9;
+            border: 1px solid #4F0341;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+        .contact-section h2 {
+            color: #F0122D;
+            margin-bottom: 10px;
+        }
+        .contact-section p {
+            color: #001233;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <!-- Left-side navbar -->
+        <h2>Navigation</h2>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="content">
+        <!-- Center section -->
+        <div class="section">
+            <h1>Smart. Simple. Superior.</h1>
+            <p>Web design courses can teach you the skills you need to create beautiful and functional websites. They typically cover the basics of HTML, CSS, and JavaScript, as well as more advanced topics such as user experience design..</p>
+        </div>
+        <div class="section">
+            <!-- Embedding Audio -->
+            <h2>Audio</h2>
+            <div class="audio-video-container">
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/234726033&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            </div>
+        </div>
+        <div class="section">
+            <!-- Embedding Video -->
+            <h2>Video</h2>
+            <div class="audio-video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2r9Ryt8Yrok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="contact-section">
+            <!-- Contact Us section -->
+            <h2>Contact Us</h2>
+            <p>For any inquiries, feel free to contact us using the information below</p>
+        </div>
+    </div>
+    <div class="remarks">
+        <!-- Remarks section -->
+        <h2>Remarks</h2>
+        <p>- Consider your learning style. <br>
+            - Check the instructor's credentials. <br>
+           - Read the course reviews. <br>
+            - Ask questions.</p>
+    </div>
+</body>
+</html>
